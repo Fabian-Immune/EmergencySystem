@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './App.css'; 
 import EmergencyForm from './components/EmergencyForm';
 //import EmergencyList from './components/EmergencyList';
 
@@ -19,9 +20,15 @@ function App() {
   return (
     <div className="app-container">
       <EmergencyForm onNewEmergency={handleNewEmergency} />
-      {/* <EmergencyList emergencies={emergencies} /> */}
     </div>
   );
 }
 
 export default App;
+
+// return (
+//     <div className="app-container">
+//       <EmergencyForm onNewEmergency={handleNewEmergency} />
+//       <EmergencyList emergencies={emergencies} /> */}
+//     </div>
+//   );
