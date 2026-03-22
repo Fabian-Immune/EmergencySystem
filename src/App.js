@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css'; 
-import EmergencyForm from './components/EmergencyForm';
+import EmergencyForm from './components/EmergencyForm.js';
 //import EmergencyList from './components/EmergencyList';
 
 function App() {
