@@ -18,7 +18,7 @@ function App() {
   };
 
   return (
-    <div className="app-container">
+    <div>
       <EmergencyForm onNewEmergency={handleNewEmergency} />
     </div>
   );
