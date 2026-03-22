@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import EmergencyForm from './components/EmergencyForm';
-import EmergencyList from './components/EmergencyList';
+//import EmergencyList from './components/EmergencyList';
 
 function App() {
   const [emergencies, setEmergencies] = useState([]);
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="app-container">
       <EmergencyForm onNewEmergency={handleNewEmergency} />
-      <EmergencyList emergencies={emergencies} />
+      {/* <EmergencyList emergencies={emergencies} /> */}
     </div>
   );
 }

@@ -9,9 +9,9 @@ app.use(cors());
 
 // MySQL connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'yourpassword',
+    host: 'emsys-db.cmnfkrixdphh.us-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'Pa$$w0rd#2488!+',
     database: 'emergency_system'
 });
 
