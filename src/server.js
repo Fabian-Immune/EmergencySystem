@@ -1,11 +1,18 @@
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
+const path = require('path');
 const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
+
+// Home page with form
+app.get('/', (req, res) => {
+    res.render('index');
+});
 
 // MySQL connection
 const db = mysql.createConnection({
