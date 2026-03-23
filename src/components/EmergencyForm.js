@@ -28,7 +28,7 @@ function EmergencyForm() {
       alert('Please fill in all required fields.');
       return;
     }
-    await fetch('http://localhost:4000/api/emergency', {
+    await fetch('http://localhost:3000/api/emergency', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)

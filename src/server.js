@@ -1,7 +1,6 @@
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
-const path = require('path');
 const cors = require('cors');
 
 const app = express();
@@ -28,7 +27,7 @@ db.connect(err => {
 });
 
 // Create new emergency entry
-app.post('/emergency', (req, res) => {
+app.post('/api/emergency', (req, res) => {
     const { type, location, description } = req.body;
     const sql = 'INSERT INTO emergencies (type, location, description) VALUES (?, ?, ?)';
     db.query(sql, [type, location, description], (err, result) => {
@@ -41,7 +40,7 @@ app.post('/emergency', (req, res) => {
 });
 
 // Get all emergencies
-app.get('/emergencies', (req, res) => {
+app.get('/api/emergencies', (req, res) => {
     db.query('SELECT * FROM emergencies ORDER BY created_at DESC', (err, results) => {
         if (err) {
             console.error(err);
